@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="Toplevel_1">
+    <property name="background">#2e2e2e</property>
+    <property name="cursor">arrow</property>
+    <property name="height">250</property>
+    <property name="iconbitmap">ABP-blanco-en-fondo-negro.ico</property>
+    <property name="minsize">325|250</property>
+    <property name="overrideredirect">False</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">SIFERE XML</property>
+    <property name="width">325</property>
+    <child>
+      <object class="ttk.Label" id="Label_3">
+        <property name="background">#2e2e2e</property>
+        <property name="image">ABP blanco en fondo negro111.png</property>
+        <layout manager="pack">
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="Label_1">
+        <property name="background">#2e2e2e</property>
+        <property name="foreground">#ffffff</property>
+        <property name="justify">center</property>
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Transformar Papel de Tabajo de SIFERE a XML para su importación en AFIP
+</property>
+        <property name="wraplength">325</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="Label_2">
+        <property name="background">#2e2e2e</property>
+        <property name="foreground">#ffffff</property>
+        <property name="justify">center</property>
+        <property name="text" translatable="yes">por Agustín Bustos Piasentini
+https://www.Agustin-Bustos-Piasentini.com.ar/</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="Abrir_Excel" named="True">
+        <property name="text" translatable="yes">Procesar Excel</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="pady">4</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="Resultados" named="True">
+        <property name="text" translatable="yes">Abrir Carpeta de Resultados</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="padx">0</property>
+          <property name="pady">4</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="Colaboraciones" named="True">
+        <property name="text" translatable="yes">Colaboraciones</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="pady">4</property>
+          <property name="side">top</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
