@@ -46,13 +46,13 @@ def Procesar_SIFERE_Excel_to_XML():
         del df_jurisdiccion["Jurisdicción"]
         
         # Crear el archivo xml
-        df_jurisdiccion.to_xml(f"Resultados/{Cuit}/Resultado - {i}.xml", index=False , attr_cols=Columnas , row_name="actividad")
+        df_jurisdiccion.to_xml(f"Resultados/{Cuit}/Resultado - {Cuit} - {i}.xml", index=False , attr_cols=Columnas , row_name="actividad")
             
         Cabecera = f'<ddjjSifereWeb> <cabecera id="{start}" cuit="{Cuit}" periodo="{Periodo}" timestamp="{start}" coeficienteDistribucion="{Coef_Distribucion}" articulo14="{Art14}" />'
         facturacion = f'<facturacion ingresosGravados="{Gravado}" ingresosNoGravados="{NoGravado}" ingresosExentos="{Exento}" />'
         
         # reemplazar la key "data" por "actividades"
-        with open(f"Resultados/{Cuit}/Resultado - {i}.xml", "r") as file:
+        with open(f"Resultados/{Cuit}/Resultado - {Cuit} - {i}.xml", "r") as file:
             data = file.read()
             data = data.replace("<data>", "<actividades>")
             data = data.replace("</data>", "</actividades>")
@@ -69,7 +69,7 @@ def Procesar_SIFERE_Excel_to_XML():
             data = "\n".join(data)
             
             # Guardar el archivo
-            with open(f"Resultados/{Cuit}/Resultado - {i}.xml", "w") as file:
+            with open(f"Resultados/{Cuit}/Resultado - {Cuit} - {i}.xml", "w") as file:
                 file.write(data)
 
     showinfo("Proceso terminado", "El proceso ha terminado con éxito")
